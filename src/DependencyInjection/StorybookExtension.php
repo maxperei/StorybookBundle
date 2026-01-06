@@ -123,7 +123,7 @@ class StorybookExtension extends Extension implements ConfigurationInterface, Pr
             ->setArgument(2, $config['cache'] ?? false)
         ;
 
-        $container->setDefinition('storybook.twig.component_runtime', new ChildDefinition('.ux.twig_component.twig.component_runtime'))
+        $container->setDefinition('storybook.twig.component_runtime', new ChildDefinition('ux.twig_component.twig.component_runtime'))
             ->replaceArgument(0, new Reference('storybook.twig.component_renderer'))
         ;
 
